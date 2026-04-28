@@ -1494,9 +1494,7 @@
         <div class="chat-bubble" id="chat-toggle">💬</div>
 
         <div class="chat-window" id="chat-window">
-            <div class="chat-header">
-                <h3 id="chat_title">Energy Sourcing Assistant</h3>
-            </div>
+            <div class="chat-header" style="display:flex;justify-content:space-between;align-items:center;"><h3 id="chat_title">Energy Sourcing Assistant</h3><span onclick="document.getElementById(\'chat-window\').style.display=\'none\'" style="cursor:pointer;font-size:20px;color:#a0aec0;padding:0 4px;">&times;</span></div>
 
             <div class="chat-messages" id="chat-messages">
                 <div class="message bot">
@@ -1995,12 +1993,12 @@
                 case 'initial':
                     chatState.product = msg;
                     chatState.step = 'specs';
-                    return 'Excellent, <strong>' + msg + '</strong> is a great choice! Turkish manufacturers are highly competitive in this area.<br><br>Could you share the <strong>specifications</strong> you need? For example: size, grade, material standard, packaging preference, or certifications (CE, ISO, HACCP, etc.)';
+                    return 'Excellent! Turkish manufacturers are highly competitive in this area.<br><br>Could you share the <strong>specifications</strong> you need? For example: size, grade, material standard, packaging preference, or certifications. Type <strong>other</strong> if unsure.';
 
                 case 'specs':
                     chatState.specs = msg;
                     chatState.step = 'quantity';
-                    return 'Perfect, noted! What <strong>quantity</strong> are you looking for?<br><br>You can specify in any unit, for example: "500 units/month", "20 metric tons", "2 x 40ft containers", or "trial order of 1 pallet".';
+                    return 'Perfect, noted! What <strong>quantity</strong> are you looking for? (e.g., "500 units/month", "20 tons", "2 containers") Type <strong>other</strong> if unsure.';
 
                 case 'quantity':
                     chatState.quantity = msg;

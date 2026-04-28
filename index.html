@@ -403,7 +403,7 @@
         <div class="hero-cta">
             <a href="#categories" class="btn-primary">Explore Products</a>
             <button class="btn-secondary" onclick="document.getElementById('chat-window').style.display='flex';document.getElementById('chat-input').focus();" style="cursor:pointer;">Talk to Our AI Assistant</button>
-            <a href="mailto:info@exportturk.com" class="btn-secondary">Contact Us</a>
+            <a href="https://wa.me/905323541129" target="_blank" class="btn-secondary" style="display:inline-flex;align-items:center;gap:8px;">WhatsApp Us</a>
         </div>
     </section>
 
@@ -645,7 +645,7 @@
 
     <div class="chat-bubble" id="chat-toggle">💬</div>
     <div class="chat-window" id="chat-window">
-        <div class="chat-header">ExportTurk AI Assistant</div>
+        <div class="chat-header" style="display:flex;justify-content:space-between;align-items:center;">ExportTurk AI Assistant<span onclick="document.getElementById('chat-window').style.display='none'" style="cursor:pointer;font-size:20px;color:#a0aec0;padding:0 4px;">&times;</span></div>
         <div class="chat-messages" id="chat-messages"></div>
         <div class="chat-input-area">
             <input type="text" id="chat-input" placeholder="Type your message...">
@@ -726,19 +726,19 @@
             case 'initial':
                 chatState.product = msg;
                 chatState.step = 'specs';
-                return 'Excellent, <strong>' + msg + '</strong>! Could you share the <strong>specifications</strong> you need? (size, grade, certifications, packaging, etc.)';
+                return 'Excellent! Could you share the <strong>specifications</strong> you need? (size, grade, certifications, packaging, etc.) Type <strong>other</strong> if unsure.';
             case 'specs':
                 chatState.specs = msg;
                 chatState.step = 'quantity';
-                return 'Got it. What <strong>quantity</strong> are you looking for? (e.g., "500 units/month", "20 tons", "2 containers")';
+                return 'Got it. What <strong>quantity</strong> are you looking for? (e.g., "500 units/month", "20 tons", "2 containers") Type <strong>other</strong> if unsure.';
             case 'quantity':
                 chatState.quantity = msg;
                 chatState.step = 'country';
-                return 'Which <strong>country/region</strong> should we ship to?';
+                return 'Which <strong>country/region</strong> should we ship to? Type <strong>other</strong> if unsure.';
             case 'country':
                 chatState.country = msg;
                 chatState.step = 'email';
-                return 'Last step! Please share your <strong>email address</strong> and our team will prepare a detailed quotation for ' + chatState.country + ' within 24 hours.';
+                return 'Last step! Please share your <strong>email address</strong> so our team can send you a quotation for ' + chatState.country + ' within 24 hours.';
             case 'email':
                 chatState.email = msg;
                 chatState.step = 'done';
