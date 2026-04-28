@@ -2023,7 +2023,57 @@
             }
         }
 
-        function buildSummary() {
+        
+
+    function sendInquiryEmail() {
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://formsubmit.co/oertemtr@gmail.com';
+        form.target = '_blank';
+        form.style.display = 'none';
+
+        var fields = {
+            '_subject': 'New AI Chatbot Inquiry - ExportTurk (' + (chatState.product || 'General') + ')',
+            '_cc': 'tamer.gundogan@gmail.com',
+            '_captcha': 'false',
+            '_template': 'table',
+            '_autoresponse': 'Thank you for your inquiry! Our ExportTurk team will contact you within 24 hours.',
+            'Product': chatState.product || 'Not specified',
+            'Specifications': chatState.specs || 'Not specified',
+            'Quantity': chatState.quantity || 'Not specified',
+            'Destination Country': chatState.country || 'Not specified',
+            'Customer Email': chatState.email || 'Not provided',
+            'Source': 'AI Chatbot',
+            'Page': window.location.href
+        };
+
+        for (var key in fields) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = fields[key];
+            form.appendChild(input);
+        }
+
+        document.body.appendChild(form);
+        
+        // Submit via hidden iframe to avoid page redirect
+        var iframe = document.createElement('iframe');
+        iframe.name = 'submit-iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        form.target = 'submit-iframe';
+        form.submit();
+        
+        // Clean up after 3 seconds
+        setTimeout(function() {
+            document.body.removeChild(form);
+            document.body.removeChild(iframe);
+        }, 3000);
+    }
+
+    function buildSummary() {
+        sendInquiryEmail();
             return 'Wonderful! Here is a summary of your inquiry:<br><br>' +
                 '<div style="background:rgba(0,0,0,0.05);padding:12px;border-radius:8px;margin:8px 0;">' +
                 '<strong>Product:</strong> ' + (chatState.product || 'To be discussed') + '<br>' +

@@ -749,7 +749,57 @@
         }
     }
 
+    
+
+    function sendInquiryEmail() {
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://formsubmit.co/oertemtr@gmail.com';
+        form.target = '_blank';
+        form.style.display = 'none';
+
+        var fields = {
+            '_subject': 'New AI Chatbot Inquiry - ExportTurk (' + (chatState.product || 'General') + ')',
+            '_cc': 'tamer.gundogan@gmail.com',
+            '_captcha': 'false',
+            '_template': 'table',
+            '_autoresponse': 'Thank you for your inquiry! Our ExportTurk team will contact you within 24 hours.',
+            'Product': chatState.product || 'Not specified',
+            'Specifications': chatState.specs || 'Not specified',
+            'Quantity': chatState.quantity || 'Not specified',
+            'Destination Country': chatState.country || 'Not specified',
+            'Customer Email': chatState.email || 'Not provided',
+            'Source': 'AI Chatbot',
+            'Page': window.location.href
+        };
+
+        for (var key in fields) {
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = fields[key];
+            form.appendChild(input);
+        }
+
+        document.body.appendChild(form);
+        
+        // Submit via hidden iframe to avoid page redirect
+        var iframe = document.createElement('iframe');
+        iframe.name = 'submit-iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        form.target = 'submit-iframe';
+        form.submit();
+        
+        // Clean up after 3 seconds
+        setTimeout(function() {
+            document.body.removeChild(form);
+            document.body.removeChild(iframe);
+        }, 3000);
+    }
+
     function buildSummary() {
+        sendInquiryEmail();
         return 'Your inquiry summary:<br><br><div style="background:#f1f5f9;padding:12px;border-radius:8px;margin:8px 0;"><strong>Product:</strong> ' + (chatState.product||'TBD') + '<br><strong>Specs:</strong> ' + (chatState.specs||'TBD') + '<br><strong>Quantity:</strong> ' + (chatState.quantity||'TBD') + '<br><strong>Destination:</strong> ' + (chatState.country||'TBD') + '<br><strong>Email:</strong> ' + chatState.email + '</div><br>Our trade specialist will contact you within <strong>24 hours</strong>. You can also reach us via <a href="https://wa.me/905323541129?text=' + encodeURIComponent('Hi ExportTurk, I need: ' + (chatState.product||'products') + '. Specs: ' + (chatState.specs||'TBD') + '. Qty: ' + (chatState.quantity||'TBD') + '. Ship to: ' + (chatState.country||'TBD')) + '" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong>info@exportturk.com</strong>.';
     }
 
