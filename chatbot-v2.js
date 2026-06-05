@@ -24,8 +24,6 @@
       forms: 'Chilled · Frozen · Fillet (skin-on, skinless, butterfly, twin)',
       sizes: 'Whole gutted: 200/300 · 300/400 · 400/600 · 600/800 · 800/1000 · 1000/1500 g. Fillets: 50/80 · 80/100 · 100/140 · 140/180 g.',
       certs: 'EU approved, HACCP, BRC, IFS, ASC, halal on request, FDA registered.',
-      priceRange: 'USD 5.50–7.50 / kg FOB Turkey (whole gutted, chilled). Fillets typically 25–40% premium.',
-      moq: 'Sample: 1 EPS box (~10 kg) by air. First commercial: 50+ kg air, or 20-ft reefer container by sea (~20 tons).',
       shelfLife: '8–10 days from packing with unbroken cold chain.',
       examples: ['Form (chilled / frozen / fillet)', 'Size grade (e.g. 400/600 g)', 'Destination port or airport (e.g. ICN, NRT, DXB)', 'Required certifications']
     },
@@ -35,8 +33,6 @@
       page: 'fish-seafood.html',
       forms: 'Chilled · Frozen · Fillet (skin-on, skinless, butterfly, twin)',
       sizes: '200/300 · 300/400 · 400/600 · 600/800 · 800/1000 · 1000/1500 g (whole gutted).',
-      priceRange: 'USD 5.50–7.50 / kg FOB Turkey (chilled).',
-      moq: 'Sample: 1 EPS box. First commercial: 50+ kg air, or 20-ft reefer container.',
       examples: ['Form', 'Size grade', 'Destination', 'Certifications required']
     },
     'trout': {
@@ -45,7 +41,6 @@
       page: 'fish-seafood.html',
       forms: 'Whole · Fillet · Smoked · Retail packs',
       sizes: 'Whole: 200/300 · 300/400 · 400/600 g. Fillets: 50/80 · 80/120 g.',
-      priceRange: 'USD 4.50–7.00 / kg FOB Turkey.',
       examples: ['Form', 'Size', 'Destination', 'Retail vs bulk packing']
     },
     'meagre': {
@@ -54,7 +49,6 @@
       page: 'fish-seafood.html',
       forms: 'Whole gutted · Fillet skin-on (PBO / PBI)',
       sizes: '800/1000 · 1000/2000 · 2000/3000 · 3000/4000 · 4000/5000 g.',
-      priceRange: 'USD 7–10 / kg FOB Turkey depending on size.',
       examples: ['Size grade', 'Form', 'Destination', 'Certifications']
     },
     'tuna': {
@@ -62,7 +56,6 @@
       name: 'Bluefin Tuna · Sashimi Grade',
       page: 'fish-seafood.html',
       forms: 'Whole · Loin · Block cut · Sashimi grade only',
-      priceRange: 'USD 25–60 / kg depending on grade and season. ICCAT quota-limited.',
       examples: ['Grade required (#1 / #2)', 'Cut (whole / loin / saku)', 'Destination']
     },
     'hazelnut': {
@@ -72,8 +65,6 @@
       forms: 'Raw in-shell · Shelled · Roasted · Blanched · Paste · Flour · Chopped/diced/sliced',
       sizes: 'Calibres 9/11, 11/13, 13/15 mm shelled; in-shell by grade.',
       certs: 'BRC, IFS, organic available, halal, kosher on request.',
-      priceRange: 'Shelled raw natural: USD 6–10 / kg FOB Turkey (highly dependent on crop year and TMO floor). Hazelnut paste: USD 7–12 / kg.',
-      moq: '1 ton in carton or vacuum pack for trial; 20-ft container (~20 tons) for full-load pricing.',
       examples: ['Form (in-shell / shelled / roasted / paste)', 'Calibre (e.g. 11/13 mm)', 'Crop year preference', 'Packing (25 kg bag / 12.5 kg vacuum / 50 kg jumbo)', 'Quantity (kg / containers)']
     },
     'pistachio': {
@@ -81,7 +72,6 @@
       name: 'Antep Pistachios',
       page: 'nuts-biscuits.html',
       forms: 'In-shell roasted salted · Shelled raw kernels · Green peeled · Paste',
-      priceRange: 'In-shell roasted: USD 12–18 / kg FOB. Green peeled premium: USD 25–40 / kg.',
       examples: ['Form', 'Size grade', 'Roasted/salted/raw', 'Quantity']
     },
     'dried fig': {
@@ -89,7 +79,6 @@
       name: 'Turkish Dried Figs (Aydın / Nazilli)',
       page: 'nuts-biscuits.html',
       forms: 'Natural sun-dried · Layer pack · Lerida · Pulled',
-      priceRange: 'USD 3.50–6.50 / kg FOB Turkey depending on grade and packing.',
       examples: ['Grade (Lerida #1, #2, etc.)', 'Packing (5 kg layer, 10 kg bulk)', 'Quantity']
     },
     'bumper': {
@@ -98,8 +87,6 @@
       page: 'auto-parts.html',
       forms: 'Front · Rear · OEM original · Aftermarket replacement · Raw primer · Pre-painted',
       certs: 'OEM tooling from Ford, Toyota, Hyundai production lines available.',
-      priceRange: 'Aftermarket replacement: USD 25–80 / unit FOB Turkey. OEM original (Ford / Toyota / Hyundai production line): USD 80–300 / unit. Strongly quantity-dependent.',
-      moq: 'Typical first order: 50–100 units consolidated in one shipment; mixed model containers possible.',
       examples: [
         'Vehicle make / model / year (e.g. Ford Focus 2018, Toyota Corolla 2020)',
         'Front or rear',
@@ -115,7 +102,6 @@
       name: 'Auto Parts & Vehicle Components',
       page: 'auto-parts.html',
       forms: 'Body (bumpers, fenders, doors), drivetrain (axles, CV joints), brakes, suspension, engine (pistons, turbos), wheels, alternators, lighting, harness, exhaust',
-      priceRange: 'Very wide range. Brake pads from USD 6 / set, alloy wheels from USD 35 / unit, turbochargers from USD 180 / unit, MacPherson struts from USD 25 / unit, alternators from USD 60 / unit. Share the part + vehicle for indicative numbers.',
       examples: ['Vehicle make / model / year', 'Part name + OEM number', 'OEM original or aftermarket', 'Quantity per part', 'Destination']
     },
     'headlight': {
@@ -123,7 +109,6 @@
       name: 'Headlights & Tail Lights',
       page: 'auto-parts.html',
       forms: 'Halogen · LED · Xenon HID · OEM original · Aftermarket replacement',
-      priceRange: 'Aftermarket: USD 25–120 / unit. OEM LED: USD 120–450 / unit.',
       examples: ['Vehicle make / model / year', 'Halogen / LED / Xenon', 'Left / right or pair', 'OEM number if known', 'Quantity']
     },
     'wheel': {
@@ -131,7 +116,6 @@
       name: 'Alloy & Steel Wheels',
       page: 'auto-parts.html',
       forms: 'Forged alloy · Cast alloy · Steel · 14"–22"',
-      priceRange: 'Steel wheels: USD 12–25 / unit. Cast alloy: USD 35–90 / unit. Forged alloy: USD 110–280 / unit.',
       examples: ['Diameter & width (e.g. 18"x7.5")', 'Bolt pattern (PCD)', 'Offset (ET)', 'Forged or cast', 'Quantity']
     },
     'transformer': {
@@ -140,8 +124,6 @@
       page: 'transformers-cables.html',
       forms: 'Distribution (50 kVA – 2,500 kVA), Power transmission (10 MVA – 100 MVA+), Dry-type, Oil-immersed, Pole-mounted, Pad-mounted, Cast resin',
       certs: 'IEC 60076 / IEEE / GOST / SABS — full compliance package available.',
-      priceRange: '250 kVA distribution: USD 6,000–10,000. 1,000 kVA: USD 18,000–28,000. 40 MVA EAF furnace: USD 800,000–1.2 M. 100 MVA transmission: USD 1.2 M–1.8 M.',
-      moq: 'Single unit accepted. Container consolidation reduces freight cost.',
       examples: [
         'kVA / MVA rating',
         'Primary / secondary voltage (e.g. 33 / 0.4 kV)',
@@ -157,7 +139,6 @@
       name: 'Power Cables & Conductors',
       page: 'transformers-cables.html',
       forms: 'XLPE insulated (LV / MV / HV), PVC, armoured (SWA / AWA), fire-resistant, submarine, solar PV, ACSR / AAC / AAAC overhead conductors',
-      priceRange: 'XLPE 11 kV cable: USD 8–14 / m depending on cross-section. ACSR overhead: USD 2.50–6 / kg. Solar PV 6 mm²: USD 0.40–0.70 / m.',
       examples: ['Voltage rating', 'Number of cores + cross-section (e.g. 3 × 240 mm²)', 'Insulation type (XLPE / PVC)', 'Armoured or not', 'Length (km)']
     },
     'copper': {
@@ -165,7 +146,6 @@
       name: 'Copper Products & Brass Alloys',
       page: 'copper-products.html',
       forms: 'LME Grade A cathode 99.99%, copper wire rod 8 mm, ACR tubes, plumbing tubes, copper-nickel marine tubes, brass rods/sheets/valves',
-      priceRange: 'Priced on LME ± premium. Cathode: LME + USD 60–120 / ton premium FOB Turkey. Copper rod: LME + USD 200–350 / ton. Finished tubes & fittings: USD 800–2,500 / ton conversion margin over LME.',
       examples: ['Form (cathode / rod / tube / fitting)', 'Purity / grade', 'Quantity (tons)', 'Destination port', 'Pricing reference (LME date)']
     },
     'petroleum': {
@@ -173,7 +153,6 @@
       name: 'Refined Petroleum',
       page: 'petroleum-aromatics.html',
       forms: 'Gasoline (RON 92/95/98), Diesel EN 590, Jet A-1, Fuel oil, LPG, Bitumen 60/70 / 80/100, Base oils (SN150/SN500), Lubricants, Naphtha',
-      priceRange: 'Priced against Platts ± premium per Incoterm. Diesel CIF rates indicatively Platts –30 / –50 USD / ton subject to quantity and discharge port. SGS/BV inspection at load and discharge included.',
       examples: ['Product + specification', 'Quantity & lifting schedule', 'Discharge port', 'Inspection company (SGS / BV)', 'Payment terms (LC / TT)']
     },
     'mining': {
@@ -181,7 +160,6 @@
       name: 'Mining & Metals',
       page: 'mining-metals.html',
       forms: 'Zinc ingot SHG 99.995%, ferro-chromium (HC / LC), ferro-silicon, ferro-manganese, cobalt carbonate, chromite ore, feldspar, boron minerals, silicon metal',
-      priceRange: 'Priced on Fastmarkets/Argus ± premium. Ferro-chromium HC: roughly USD 1.0–1.5 / lb chromium contained, CIF. Cobalt carbonate: tracks LME cobalt. Chromite ore: USD 180–280 / ton FOB.',
       examples: ['Product + grade (e.g. HC FeCr 60–70% Cr)', 'Quantity (tons)', 'Specification certificate required', 'Destination', 'Inspection']
     }
   };
@@ -192,7 +170,6 @@
     price:    /\bprice|\bpricing|\bcost|\brate\b|\bquote|how\s+much|\busd|\beur\b|\$|tariff|expensive|cheap/i,
     spec:     /\bspec|specification|\bdetail|tell me about|describe|info on|info about|what.*available|examples?/i,
     sample:   /\bsample|\btrial|test order|small order|first order/i,
-    moq:      /\bmoq\b|minimum order|min(\.|imum)? order|min(imum)? (quantity|qty)|smallest order|how (little|few)/i,
     shipping: /\bship|deliver|freight|logistic|incoterm|\bfob\b|\bcif\b|\bcfr\b|\bair\b|\bsea\s*freight|\bcontainer|reefer|lead\s*time/i,
     cert:     /\bcertif|\biso\b|\bhaccp\b|\bce\b|\bfda\b|\bbrc\b|\bhalal\b|kosher|organic|origin\s*cert/i,
     payment:  /payment|\blc\b|letter of credit|\btt\b|\bt\/t\b|advance|deposit|terms/i,
@@ -268,32 +245,22 @@
     if (info.sizes)     s += '<br><strong>Typical sizes:</strong> ' + info.sizes;
     if (info.certs)     s += '<br><strong>Certifications:</strong> ' + info.certs;
     if (info.shelfLife) s += '<br><strong>Shelf life:</strong> ' + info.shelfLife;
-    s += '<br><br>To prepare a precise quote we usually need:<br>• ' + info.examples.join('<br>• ');
-    s += '<br><br>Want indicative pricing or MOQ too?';
+    s += '<br><br>To prepare a tailored quotation we usually need:<br>• ' + info.examples.join('<br>• ');
+    s += '<br><br>For pricing, MOQ and lead time, please contact our trade team at <a href="mailto:info@exportturk.com" style="color:#0d7377;font-weight:600;">info@exportturk.com</a> with the details above — they will return a formal quotation within 24 hours. You can also share your email here and I will route the inquiry to them.';
     return s;
   }
 
   function respondPrice(productKey) {
-    if (!productKey) {
-      return 'Pricing varies a lot by product, so could you tell me which line you\'re looking at? <strong>Auto parts, seafood, hazelnuts, transformers, copper, petroleum, or mining metals</strong> — and ideally the specific product within that line.';
-    }
-    const info = KB[productKey];
-    let s = '<strong>Indicative pricing for ' + info.name + ':</strong><br>' +
-      (info.priceRange || 'Pricing on request — please share quantity and destination.');
-    s += '<br><br><em>Final pricing depends on:</em> exact specification, quantity, packing, Incoterm (FOB / CIF / CFR), destination port, certifications and delivery timeline.';
-    if (info.moq) s += '<br><br><strong>MOQ:</strong> ' + info.moq;
-    s += '<br><br>If you\'d like a formal pro-forma invoice, share your <strong>target quantity</strong> and <strong>destination port</strong>, and I\'ll get our trade team to send numbers within 24 hours.';
+    const subject = (productKey && KB[productKey]) ? KB[productKey].name : 'our products';
+    let s = 'Pricing for <strong>' + subject + '</strong> is set per inquiry. It depends on exact specification, volume, packing, Incoterm (FOB / CIF / CFR), destination port, certifications, delivery timeline and current market conditions.';
+    s += '<br><br>For a formal quotation, please email <a href="mailto:info@exportturk.com" style="color:#0d7377;font-weight:600;">info@exportturk.com</a> with your product details, target quantity and destination — our trade team will respond within 24 hours.';
+    s += '<br><br>Or share your email here and I will route the inquiry to them on your behalf.';
     return s;
   }
 
   function respondMoq(productKey) {
-    if (productKey && KB[productKey] && KB[productKey].moq) {
-      return '<strong>MOQ for ' + KB[productKey].name + ':</strong> ' + KB[productKey].moq;
-    }
-    if (productKey && KB[productKey]) {
-      return 'MOQ for <strong>' + KB[productKey].name + '</strong> is flexible — we can support single-unit samples and scale up to full-container loads. Tell me your target quantity and I\'ll confirm what works.';
-    }
-    return 'MOQs depend on the product. Could you tell me which item you\'re sourcing?';
+    const subject = (productKey && KB[productKey]) ? KB[productKey].name : 'our products';
+    return 'Minimum order quantities for <strong>' + subject + '</strong> depend on the exact specification, packing and destination. For an accurate MOQ specific to your inquiry, please contact our trade team at <a href="mailto:info@exportturk.com" style="color:#0d7377;font-weight:600;">info@exportturk.com</a> with your product details — they will confirm what works for your shipment.';
   }
 
   function respondShipping() {
@@ -305,15 +272,12 @@
   }
 
   function respondSample(productKey) {
-    let base = 'Sample shipments are available for almost everything we offer. Perishables ship as 1 EPS box (~10 kg) by air. Dry goods ship as 1 carton or vacuum pack by DHL / FedEx courier (3–5 days door-to-door). Standard arrangement: buyer covers freight on the first sample; product is at cost or complimentary depending on the line.';
-    if (productKey && KB[productKey]) {
-      base += '<br><br>For <strong>' + KB[productKey].name + '</strong> specifically, this is straightforward. Want me to start a sample request? Just share your delivery address and email.';
-    }
-    return base;
+    const subject = (productKey && KB[productKey]) ? KB[productKey].name : 'the product you are sourcing';
+    return 'Sample availability for <strong>' + subject + '</strong> depends on the supplier, season and specification. To request a sample please email <a href="mailto:info@exportturk.com" style="color:#0d7377;font-weight:600;">info@exportturk.com</a> with the product, target specification and your delivery address — our trade team will confirm whether a sample shipment is possible and the terms.';
   }
 
   function respondPayment() {
-    return 'For first orders we typically work on <strong>30–50% T/T deposit on order confirmation</strong>, balance against B/L copy or AWB. Established customers move to <strong>LC at sight</strong> or open account terms (NET 30 / 60). For larger first orders we can use escrow services or third-party inspection-and-release. What\'s your preferred payment method?';
+    return 'Payment terms are agreed per transaction based on order size and customer history. Common arrangements include T/T (telegraphic transfer) and LC (letter of credit). For exact terms on your order, please contact our trade team at <a href="mailto:info@exportturk.com" style="color:#0d7377;font-weight:600;">info@exportturk.com</a>.';
   }
 
   function respondContact() {
@@ -359,11 +323,11 @@
 
     // Pure greeting
     if (intents.includes('greet') && !state.product) {
-      return 'Hello! I\'m the ExportTurk sourcing assistant. I can share <strong>product specs, indicative pricing, MOQs, shipping options and catalogues</strong> for our seven lines: auto parts, fish &amp; seafood, hazelnuts &amp; nuts, transformers &amp; cables, copper, petroleum, and mining metals. What are you sourcing today?';
+      return 'Hello! I\'m the ExportTurk sourcing assistant. I can share <strong>product specifications, available forms, certifications, shipping options and catalogues</strong> for our seven lines: auto parts, fish &amp; seafood, hazelnuts &amp; nuts, transformers &amp; cables, copper, petroleum, and mining metals. For pricing and formal quotations, our trade team handles inquiries directly at info@exportturk.com. What are you sourcing today?';
     }
 
     if (intents.includes('thanks')) {
-      return 'You\'re welcome. Anything else — pricing, specifications, shipping, certifications, or a sample order?';
+      return 'You\'re welcome. Anything else — product specifications, shipping options, certifications, or shall I route your inquiry to our trade team?';
     }
 
     if (intents.includes('bye')) {
@@ -387,7 +351,7 @@
     // Product mentioned but no specific intent — give the spec overview as default
     if (state.product && !state.infoDelivered) {
       state.infoDelivered = true;
-      return respondSpec(state.product) + '<br><br>I can also share <strong>indicative pricing</strong>, <strong>MOQ</strong>, or our <strong>PDF catalogue</strong> — just ask.';
+      return respondSpec(state.product) + '<br><br>I can also share our <strong>PDF catalogue</strong>, certifications, or shipping options — just ask. For pricing and quotations, our trade team handles inquiries at info@exportturk.com.';
     }
 
     // Yes/No follow-ups after offering pricing or catalogue
@@ -405,7 +369,7 @@
     }
 
     // Truly unrecognised input
-    return 'Let me help — are you looking for <strong>pricing</strong>, <strong>specifications</strong>, a <strong>catalogue</strong>, or do you want to start a <strong>sample order</strong>? You can also just name the product (e.g. "front bumper Ford Focus 2018", "11/13 mm shelled hazelnut", "1000 kVA distribution transformer") and I\'ll share the relevant details.';
+    return 'Let me help — are you looking for product <strong>specifications</strong>, <strong>certifications</strong>, <strong>shipping options</strong>, or a <strong>catalogue</strong>? Or you can name the product (e.g. "front bumper Ford Focus 2018", "11/13 mm shelled hazelnut", "1000 kVA distribution transformer") and I\'ll share what I have. For pricing and quotations, our trade team replies within 24 hours at info@exportturk.com.';
   }
 
   // ============== EMAIL SUBMIT ==============
@@ -480,7 +444,7 @@
       const visible = chatWindow.style.display === 'flex';
       chatWindow.style.display = visible ? 'none' : 'flex';
       if (!visible && !opened) {
-        addMsg('Hi! I\'m the ExportTurk sourcing assistant. Ask me anything — <strong>pricing, specifications, MOQs, shipping, certifications, or catalogues</strong> — for any of our product lines (auto parts, fish &amp; seafood, hazelnuts, transformers, copper, petroleum, mining metals). What are you sourcing today?', 'bot');
+        addMsg('Hi! I\'m the ExportTurk sourcing assistant. Ask me about <strong>specifications, available forms, certifications, shipping options or catalogues</strong> for any of our product lines (auto parts, fish &amp; seafood, hazelnuts, transformers, copper, petroleum, mining metals). For pricing and formal quotations, our trade team replies within 24 hours at <strong>info@exportturk.com</strong>. What are you sourcing today?', 'bot');
         opened = true;
       }
     });
@@ -523,17 +487,4 @@
         const formMessage = document.getElementById('form-message');
         if (formMessage) {
           formMessage.textContent = 'Thank you! Your RFQ has been submitted. We will contact you within 24 hours.';
-          formMessage.className = 'form-message success';
-          setTimeout(() => { formMessage.className = 'form-message'; }, 6000);
-        }
-        setTimeout(() => { newForm.reset(); }, 800);
-      });
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
+          formMessage.className = 'form-message success'
