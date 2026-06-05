@@ -498,6 +498,37 @@
 
     newSendBtn.addEventListener('click', handleSend);
     newInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleSend(); });
+
+    // RFQ form on category pages — make it actually deliver to FormSubmit + show success message
+    const rfqForm = document.getElementById('rfq-form');
+    if (rfqForm) {
+      // Ensure the form posts into a hidden iframe so the page doesn't redirect
+      let iframe = document.getElementById('rfq-target-iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'rfq-target-iframe';
+        iframe.name = 'rfq-target-iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+      rfqForm.target = 'rfq-target-iframe';
+
+      // Replace any existing submit listeners by cloning
+      const newForm = rfqForm.cloneNode(true);
+      newForm.target = 'rfq-target-iframe';
+      rfqForm.parentNode.replaceChild(newForm, rfqForm);
+
+      newForm.addEventListener('submit', function () {
+        // Let the form submit naturally to FormSubmit (no preventDefault)
+        const formMessage = document.getElementById('form-message');
+        if (formMessage) {
+          formMessage.textContent = 'Thank you! Your RFQ has been submitted. We will contact you within 24 hours.';
+          formMessage.className = 'form-message success';
+          setTimeout(() => { formMessage.className = 'form-message'; }, 6000);
+        }
+        setTimeout(() => { newForm.reset(); }, 800);
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
