@@ -417,31 +417,48 @@
   // ============== UI WIRING ==============
   function init() {
     // Use IDs (present on every page) with class-name fallbacks
-    const chatBubble = document.getElementById('chat-toggle') || document.querySelector('.chat-bubble');
-    const chatWindow = document.getElementById('chat-window') || document.querySelector('.chat-window');
-    const chatMessages = document.getElementById('chat-messages') || document.querySelector('.chat-messages');
-    const chatInput = document.getElementById('chat-input')
-      || document.querySelector('.chat-footer input')
-      || document.querySelector('.chat-input-area input');
-    const chatSendBtn = document.getElementById('chat-send')
-      || document.querySelector('.chat-footer button')
-      || document.querySelector('.chat-input-area button');
-    if (!chatBubble || !chatWindow || !chatMessages || !chatInput || !chatSendBtn) {
-      console.warn('[chatbot-v2] missing chat element — init aborted', {
-        chatBubble: !!chatBubble, chatWindow: !!chatWindow, chatMessages: !!chatMessages,
-        chatInput: !!chatInput, chatSendBtn: !!chatSendBtn
+    const oldBubble = document.getElementById('chat-toggle') || document.querySelector('.chat-bubble');
+    const oldWindow = document.getElementById('chat-window') || document.querySelector('.chat-window');
+    if (!oldBubble || !oldWindow) {
+      console.warn('[chatbot-v2] missing chat-bubble or chat-window — init aborted');
+      return;
+    }
+    console.log('[chatbot-v2] init OK — replacing chat widget');
+
+    // CLONE the entire bubble AND chat-window. This is what breaks the old
+    // inline chat: the old script's references (chatToggle, chatWindow,
+    // chatSend, chatInput, chatMessages) and the MutationObserver on
+    // chat-window all become attached to DETACHED elements after replaceChild.
+    const newBubble = oldBubble.cloneNode(true);
+    oldBubble.parentNode.replaceChild(newBubble, oldBubble);
+
+    const newWindow = oldWindow.cloneNode(true);
+    oldWindow.parentNode.replaceChild(newWindow, oldWindow);
+    newWindow.style.display = 'none';  // start hidden regardless of old state
+
+    // Re-acquire children from the CLONED window
+    const chatWindow = newWindow;
+    const chatMessages = newWindow.querySelector('#chat-messages')
+      || newWindow.querySelector('.chat-messages');
+    const chatInput = newWindow.querySelector('#chat-input')
+      || newWindow.querySelector('.chat-footer input')
+      || newWindow.querySelector('.chat-input-area input')
+      || newWindow.querySelector('input[type="text"]');
+    const newSendBtn = newWindow.querySelector('#chat-send')
+      || newWindow.querySelector('.chat-footer button')
+      || newWindow.querySelector('.chat-input-area button')
+      || newWindow.querySelector('button');
+    const newInput = chatInput;
+
+    if (!chatMessages || !chatInput || !newSendBtn) {
+      console.warn('[chatbot-v2] could not find children inside cloned chat-window', {
+        chatMessages: !!chatMessages, chatInput: !!chatInput, newSendBtn: !!newSendBtn
       });
       return;
     }
-    console.log('[chatbot-v2] init OK');
 
-    // Wipe any inline listeners attached by an older script
-    const newBubble = chatBubble.cloneNode(true);
-    chatBubble.parentNode.replaceChild(newBubble, chatBubble);
-    const newSendBtn = chatSendBtn.cloneNode(true);
-    chatSendBtn.parentNode.replaceChild(newSendBtn, chatSendBtn);
-    const newInput = chatInput.cloneNode(true);
-    chatInput.parentNode.replaceChild(newInput, chatInput);
+    // Clear any messages the old code may have queued
+    chatMessages.innerHTML = '';
 
     let opened = false;
     function addMsg(text, sender) {
@@ -485,4 +502,31 @@
         iframe.id = 'rfq-target-iframe';
         iframe.name = 'rfq-target-iframe';
         iframe.style.display = 'none';
-        d
+        document.body.appendChild(iframe);
+      }
+      rfqForm.target = 'rfq-target-iframe';
+
+      // Replace any existing submit listeners by cloning
+      const newForm = rfqForm.cloneNode(true);
+      newForm.target = 'rfq-target-iframe';
+      rfqForm.parentNode.replaceChild(newForm, rfqForm);
+
+      newForm.addEventListener('submit', function () {
+        // Let the form submit naturally to FormSubmit (no preventDefault)
+        const formMessage = document.getElementById('form-message');
+        if (formMessage) {
+          formMessage.textContent = 'Thank you! Your RFQ has been submitted. We will contact you within 24 hours.';
+          formMessage.className = 'form-message success';
+          setTimeout(() => { formMessage.className = 'form-message'; }, 6000);
+        }
+        setTimeout(() => { newForm.reset(); }, 800);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
