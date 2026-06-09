@@ -161,6 +161,52 @@
       page: 'mining-metals.html',
       forms: 'Zinc ingot SHG 99.995%, ferro-chromium (HC / LC), ferro-silicon, ferro-manganese, cobalt carbonate, chromite ore, feldspar, boron minerals, silicon metal',
       examples: ['Product + grade (e.g. HC FeCr 60–70% Cr)', 'Quantity (tons)', 'Specification certificate required', 'Destination', 'Inspection']
+    },
+    // ============== SERVICES (Medical & Education Tourism) ==============
+    'hair transplant': {
+      keys: ['hair transplant', 'hair restoration', 'hairtransplant', 'fue', 'dhi', 'sapphire fue', 'hair clinic'],
+      name: 'Hair Transplant (FUE / DHI / Sapphire FUE)',
+      page: 'hair-transplant.html',
+      forms: 'FUE · DHI (Direct Hair Implantation with Choi pen) · Sapphire FUE · PRP support · Beard / eyebrow transplant',
+      certs: 'JCI accredited clinics · ISO 9001 · Turkish Ministry of Health licensed · ISHRS surgeons',
+      examples: [
+        'Photos of your scalp from 4 angles (front, both sides, crown)',
+        'Goal: hairline restoration, density, beard, eyebrow',
+        'Preferred technique (FUE / DHI / Sapphire) — or open to recommendation',
+        'Approximate target dates / available travel window',
+        'Any prior hair surgery or medical conditions'
+      ]
+    },
+    'dental': {
+      keys: ['dental', 'dentist', 'teeth', 'tooth', 'implant', 'veneer', 'veneers', 'crown', 'hollywood smile', 'all-on-4', 'all on 4', 'all-on-6'],
+      name: 'Dental Treatment (Implants, Veneers, Hollywood Smile)',
+      page: 'dental-health.html',
+      forms: 'Dental implants (Straumann, Nobel, MIS) · E.max / Zirconia veneers · Hollywood Smile · All-on-4 / All-on-6 · Crowns, bridges, bone graft, sinus lift',
+      certs: 'JCI accredited · ISO 9001 · Turkish Ministry of Health · TDB licensed · CE-certified materials',
+      examples: [
+        'Most recent dental X-ray or CBCT scan (if available)',
+        'Intraoral photos or selfie smile photos',
+        'Treatment needed (implants, veneers, full mouth, Hollywood Smile, etc.)',
+        'Preferred materials (E.max, Zirconia, brand of implant)',
+        'Available travel window',
+        'Any prior dental treatments or medical conditions'
+      ]
+    },
+    'education': {
+      keys: ['education', 'study', 'university', 'student', 'placement', 'bachelor', 'master', 'phd', 'medical school', 'scholarship', 'yos', 'tomer', 'enroll', 'admission'],
+      name: 'University Placement (Bachelor / Master / PhD / Medical)',
+      page: 'education-services.html',
+      forms: 'Bachelor degrees · Master & PhD · Medical & dental school · Language preparation (TÖMER) · YÖS / SAT exam coordination · Scholarship application support',
+      certs: 'YÖK recognised universities · YTB partner · WFME medical · ABET / AACSB programs · TÖMER certified · Apostille support',
+      examples: [
+        'Your most recent academic transcript / diploma',
+        'Target field of study (engineering, medicine, business, etc.)',
+        'Target degree level (bachelor, master, PhD)',
+        'Preferred medium of instruction (English / Turkish)',
+        'Target start semester (Fall / Spring)',
+        'Whether you need scholarship guidance',
+        'Your country of citizenship (affects YÖS / SAT requirements)'
+      ]
     }
   };
 
