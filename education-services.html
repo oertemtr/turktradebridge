@@ -169,7 +169,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
         <li><a href="index.html">Products</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="mailto:info@exportturk.com" class="contact-pill">Contact</a></li>
+        <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" class="contact-pill">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -343,7 +343,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
       </details>
       <details class="faq-item">
         <summary>How is pricing structured?</summary>
-        <p>Our placement service fee depends on the scope (single university application vs full coordination across multiple universities, exam coordination, scholarship strategy). Because every student profile is different we do not publish flat rates — email <a href="mailto:info@exportturk.com" style="color:#0d7377;">info@exportturk.com</a> with your background and target field, and we return a written service proposal within 24 hours.</p>
+        <p>Our placement service fee depends on the scope (single university application vs full coordination across multiple universities, exam coordination, scholarship strategy). Because every student profile is different we do not publish flat rates — email <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" style="color:#0d7377;">email</a> with your background and target field, and we return a written service proposal within 24 hours.</p>
       </details>
     </div>
   </div>
@@ -353,7 +353,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
   <h2>Free University Placement Consultation</h2>
   <p>Share your academic background, target field, and start date. Within 48 hours we return a personalised shortlist of 3–5 Turkish universities — admission outlook, scholarship eligibility, and a clear timeline.</p>
   <div class="cta-buttons">
-    <a href="mailto:info@exportturk.com?subject=University%20Placement%20Inquiry" class="btn btn-primary">Email info@exportturk.com</a>
+    <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" data-q="?subject=University%20Placement%20Inquiry" href="#" class="btn btn-primary">email</a>
     <a href="https://wa.me/905323541129?text=Hi%20ExportTurk%2C%20I%27d%20like%20to%20study%20in%20Turkey." class="btn btn-secondary">WhatsApp +90 532 354 11 29</a>
   </div>
 </section>
@@ -377,12 +377,12 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
         <li><a href="mining-metals.html">Mining &amp; Metals</a></li>
       </ul></div>
       <div class="footer-col"><h5>Contact</h5><ul>
-        <li><a href="mailto:info@exportturk.com">info@exportturk.com</a></li>
+        <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></li>
         <li><a href="https://wa.me/905323541129">+90 532 354 11 29</a></li>
         <li>Nilüfer, Bursa · Türkiye</li>
       </ul></div>
     </div>
-    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a href="mailto:info@exportturk.com">info@exportturk.com</a></div>
+    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></div>
   </div>
 </footer>
 
@@ -396,5 +396,9 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
   </div>
 </div>
 <script src="chatbot-v2.js" defer></script>
+<!-- email-mask decoder -->
+<script>
+(function(){var a=document.querySelectorAll('.e-mask');for(var i=0;i<a.length;i++){var el=a[i];var u=atob(el.getAttribute('data-u')||'');var d=atob(el.getAttribute('data-d')||'');if(!u||!d)continue;var e=u+'@'+d;var q=el.getAttribute('data-q')||'';if(el.tagName==='A'){el.href='mailto:'+e+q;var t=(el.textContent||'').trim();if(t==='email'||t==='Contact'||t==='contact'||t===''||t.indexOf(' at ')>-1)el.textContent=e;}else{el.textContent=e;}}})();
+</script>
 </body>
 </html>

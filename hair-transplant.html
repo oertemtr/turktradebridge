@@ -172,7 +172,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
         <li><a href="index.html">Products</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="mailto:info@exportturk.com" class="contact-pill">Contact</a></li>
+        <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" class="contact-pill">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -346,7 +346,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
       </details>
       <details class="faq-item">
         <summary>How is pricing structured?</summary>
-        <p>Pricing depends on the technique, graft count, clinic, and package contents. Because every case is custom, we do not publish indicative prices on this page — please email <a href="mailto:info@exportturk.com" style="color:#0d7377;">info@exportturk.com</a> with your photos and goals, and we'll return a written quotation from 2–3 verified clinics within 24 hours.</p>
+        <p>Pricing depends on the technique, graft count, clinic, and package contents. Because every case is custom, we do not publish indicative prices on this page — please email <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" style="color:#0d7377;">email</a> with your photos and goals, and we'll return a written quotation from 2–3 verified clinics within 24 hours.</p>
       </details>
     </div>
   </div>
@@ -356,7 +356,7 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
   <h2>Free Hair Transplant Consultation</h2>
   <p>Send us your scalp photos and goals. Within 24 hours we'll return options from 2–3 verified Istanbul clinics — package contents, surgeon credentials, and a clear written quotation.</p>
   <div class="cta-buttons">
-    <a href="mailto:info@exportturk.com?subject=Hair%20Transplant%20Inquiry" class="btn btn-primary">Email info@exportturk.com</a>
+    <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" data-q="?subject=Hair%20Transplant%20Inquiry" href="#" class="btn btn-primary">email</a>
     <a href="https://wa.me/905323541129?text=Hi%20ExportTurk%2C%20I'm%20interested%20in%20hair%20transplant%20in%20Turkey." class="btn btn-secondary">WhatsApp +90 532 354 11 29</a>
   </div>
 </section>
@@ -380,12 +380,12 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
         <li><a href="mining-metals.html">Mining &amp; Metals</a></li>
       </ul></div>
       <div class="footer-col"><h5>Contact</h5><ul>
-        <li><a href="mailto:info@exportturk.com">info@exportturk.com</a></li>
+        <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></li>
         <li><a href="https://wa.me/905323541129">+90 532 354 11 29</a></li>
         <li>Nilüfer, Bursa · Türkiye</li>
       </ul></div>
     </div>
-    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a href="mailto:info@exportturk.com">info@exportturk.com</a></div>
+    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></div>
   </div>
 </footer>
 
@@ -399,5 +399,9 @@ footer{background:#0f1418;color:#a0aec0;padding:50px 40px 24px}
   </div>
 </div>
 <script src="chatbot-v2.js" defer></script>
+<!-- email-mask decoder -->
+<script>
+(function(){var a=document.querySelectorAll('.e-mask');for(var i=0;i<a.length;i++){var el=a[i];var u=atob(el.getAttribute('data-u')||'');var d=atob(el.getAttribute('data-d')||'');if(!u||!d)continue;var e=u+'@'+d;var q=el.getAttribute('data-q')||'';if(el.tagName==='A'){el.href='mailto:'+e+q;var t=(el.textContent||'').trim();if(t==='email'||t==='Contact'||t==='contact'||t===''||t.indexOf(' at ')>-1)el.textContent=e;}else{el.textContent=e;}}})();
+</script>
 </body>
 </html>

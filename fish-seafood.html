@@ -1471,7 +1471,7 @@
             </div>
             <div class="footer-section">
                 <h4 data-i18n="footer_contact_header">Contact Us</h4>
-                <p>Email: <a href="mailto:info@exportturk.com">info@exportturk.com</a></p>
+                <p>Email: <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></p>
                 <p data-i18n="footer_phone">Phone: +90 532 354 11 29</p>
                 <p data-i18n="footer_address">FethiyeOSB Mahallesi Mavi Cadde, 16140 Nilüfer/BURSA</p>
             </div>
@@ -1949,7 +1949,7 @@
                 if (isThanks) {
                     return 'You are welcome! Our team will be in touch soon. If you need anything else, just type <strong>new inquiry</strong>. Have a great day!';
                 }
-                return 'Your inquiry has been submitted and our team will reach out shortly! If you would like to inquire about another product, just type <strong>new inquiry</strong>. You can also reach us via <a href=\"https://wa.me/905323541129\" target=\"_blank\" style=\"color:#25D366;font-weight:bold;\">WhatsApp</a> or email <strong>info@exportturk.com</strong>.';
+                return 'Your inquiry has been submitted and our team will reach out shortly! If you would like to inquire about another product, just type <strong>new inquiry</strong>. You can also reach us via <a href=\"https://wa.me/905323541129\" target=\"_blank\" style=\"color:#25D366;font-weight:bold;\">WhatsApp</a> or email <strong><span class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=">email</span></strong>.';
             }
 
             if (isGreeting && chatState.step === 'initial') {
@@ -2076,8 +2076,8 @@
                 '<strong>Quantity:</strong> ' + (chatState.quantity || 'To be discussed') + '<br>' +
                 '<strong>Destination:</strong> ' + (chatState.country || 'To be discussed') + '<br>' +
                 '<strong>Email:</strong> ' + chatState.email + '</div><br>' +
-                'Our trade specialist will contact you within <strong>24 hours</strong> with a detailed quotation. You can also reach us via <a href="https://wa.me/905323541129" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong>info@exportturk.com</strong>.<br><br>' +
-                'Type <strong>new inquiry</strong> for another product, or send your inquiry directly via '+ '<a href="https://wa.me/905323541129?text=' + encodeURIComponent('Hi ExportTurk, I am interested in: ' + (chatState.product || 'your products') + '. Specs: ' + (chatState.specs || 'TBD') + '. Qty: ' + (chatState.quantity || 'TBD') + '. Destination: ' + (chatState.country || 'TBD')) + '" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong>info@exportturk.com</strong>.';
+                'Our trade specialist will contact you within <strong>24 hours</strong> with a detailed quotation. You can also reach us via <a href="https://wa.me/905323541129" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong><span class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=">email</span></strong>.<br><br>' +
+                'Type <strong>new inquiry</strong> for another product, or send your inquiry directly via '+ '<a href="https://wa.me/905323541129?text=' + encodeURIComponent('Hi ExportTurk, I am interested in: ' + (chatState.product || 'your products') + '. Specs: ' + (chatState.specs || 'TBD') + '. Qty: ' + (chatState.quantity || 'TBD') + '. Destination: ' + (chatState.country || 'TBD')) + '" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong><span class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=">email</span></strong>.';
         }
 
             
@@ -2128,5 +2128,9 @@
     <script src="chatbot-v2.js" defer></script>
 
 
+<!-- email-mask decoder -->
+<script>
+(function(){var a=document.querySelectorAll('.e-mask');for(var i=0;i<a.length;i++){var el=a[i];var u=atob(el.getAttribute('data-u')||'');var d=atob(el.getAttribute('data-d')||'');if(!u||!d)continue;var e=u+'@'+d;var q=el.getAttribute('data-q')||'';if(el.tagName==='A'){el.href='mailto:'+e+q;var t=(el.textContent||'').trim();if(t==='email'||t==='Contact'||t==='contact'||t===''||t.indexOf(' at ')>-1)el.textContent=e;}else{el.textContent=e;}}})();
+</script>
 </body>
 </html>

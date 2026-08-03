@@ -188,7 +188,7 @@ footer { background:#0f1418; color:#a0aec0; padding:50px 40px 24px; }
         <li><a href="index.html">Products</a></li>
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="mailto:info@exportturk.com" class="contact-pill">Contact</a></li>
+        <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" class="contact-pill">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -347,7 +347,7 @@ footer { background:#0f1418; color:#a0aec0; padding:50px 40px 24px; }
   <h2>Ready to Start?</h2>
   <p>Free consultation, no obligation. Share what you need and our team responds within 24 hours with options, accreditations, and a transparent indicative timeline.</p>
   <div class="cta-buttons">
-    <a href="mailto:info@exportturk.com?subject=Services%20Inquiry" class="btn btn-primary">Email info@exportturk.com</a>
+    <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" data-q="?subject=Services%20Inquiry" href="#" class="btn btn-primary">email</a>
     <a href="https://wa.me/905323541129?text=Hi%20ExportTurk%2C%20I'd%20like%20to%20learn%20about%20your%20services." class="btn btn-secondary">WhatsApp Us</a>
   </div>
 </section>
@@ -382,13 +382,13 @@ footer { background:#0f1418; color:#a0aec0; padding:50px 40px 24px; }
       <div class="footer-col">
         <h5>Contact</h5>
         <ul>
-          <li><a href="mailto:info@exportturk.com">info@exportturk.com</a></li>
+          <li><a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></li>
           <li><a href="https://wa.me/905323541129">+90 532 354 11 29</a></li>
           <li>Nilüfer, Bursa · Türkiye</li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a href="mailto:info@exportturk.com">info@exportturk.com</a></div>
+    <div class="footer-bottom">© 2026 ExportTurk. All rights reserved. | <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></div>
   </div>
 </footer>
 
@@ -405,5 +405,9 @@ footer { background:#0f1418; color:#a0aec0; padding:50px 40px 24px; }
 
 <script src="chatbot-v2.js" defer></script>
 
+<!-- email-mask decoder -->
+<script>
+(function(){var a=document.querySelectorAll('.e-mask');for(var i=0;i<a.length;i++){var el=a[i];var u=atob(el.getAttribute('data-u')||'');var d=atob(el.getAttribute('data-d')||'');if(!u||!d)continue;var e=u+'@'+d;var q=el.getAttribute('data-q')||'';if(el.tagName==='A'){el.href='mailto:'+e+q;var t=(el.textContent||'').trim();if(t==='email'||t==='Contact'||t==='contact'||t===''||t.indexOf(' at ')>-1)el.textContent=e;}else{el.textContent=e;}}})();
+</script>
 </body>
 </html>

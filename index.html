@@ -383,7 +383,7 @@
         </a>
         <div class="header-contact">
             <a href="services.html" style="margin-right:18px;color:#c9a84c;font-weight:600;">Services</a>
-            <a href="mailto:info@exportturk.com">info@exportturk.com</a>
+            <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a>
         </div>
     </header>
 
@@ -716,7 +716,7 @@
     </section>
 
     <footer>
-        <p>© 2026 ExportTurk. All rights reserved. | <a href="mailto:info@exportturk.com">info@exportturk.com</a></p>
+        <p>© 2026 ExportTurk. All rights reserved. | <a class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=" href="#" >email</a></p>
         <p style="margin-top:8px;font-size:12px;color:#4a5568;">Trade data sourced from TURKSTAT and ITC Trade Map. Updated April 2026.</p>
     </footer>
 
@@ -815,7 +815,7 @@
                 chatState = { step: 'initial', product: '', specs: '', quantity: '', country: '', email: chatState.email };
                 return 'Sure! What product are you interested in?';
             }
-            return 'Your inquiry has been noted! Our team will contact you shortly. Type <strong>new inquiry</strong> for another product, or reach us via <a href="https://wa.me/905323541129" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong>info@exportturk.com</strong>.';
+            return 'Your inquiry has been noted! Our team will contact you shortly. Type <strong>new inquiry</strong> for another product, or reach us via <a href="https://wa.me/905323541129" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong><span class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=">email</span></strong>.';
         }
 
         switch(chatState.step) {
@@ -896,7 +896,7 @@
 
     function buildSummary() {
         sendInquiryEmail();
-        return 'Your inquiry summary:<br><br><div style="background:#f1f5f9;padding:12px;border-radius:8px;margin:8px 0;"><strong>Product:</strong> ' + (chatState.product||'TBD') + '<br><strong>Specs:</strong> ' + (chatState.specs||'TBD') + '<br><strong>Quantity:</strong> ' + (chatState.quantity||'TBD') + '<br><strong>Destination:</strong> ' + (chatState.country||'TBD') + '<br><strong>Email:</strong> ' + chatState.email + '</div><br>Our trade specialist will contact you within <strong>24 hours</strong>. You can also reach us via <a href="https://wa.me/905323541129?text=' + encodeURIComponent('Hi ExportTurk, I need: ' + (chatState.product||'products') + '. Specs: ' + (chatState.specs||'TBD') + '. Qty: ' + (chatState.quantity||'TBD') + '. Ship to: ' + (chatState.country||'TBD')) + '" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong>info@exportturk.com</strong>.';
+        return 'Your inquiry summary:<br><br><div style="background:#f1f5f9;padding:12px;border-radius:8px;margin:8px 0;"><strong>Product:</strong> ' + (chatState.product||'TBD') + '<br><strong>Specs:</strong> ' + (chatState.specs||'TBD') + '<br><strong>Quantity:</strong> ' + (chatState.quantity||'TBD') + '<br><strong>Destination:</strong> ' + (chatState.country||'TBD') + '<br><strong>Email:</strong> ' + chatState.email + '</div><br>Our trade specialist will contact you within <strong>24 hours</strong>. You can also reach us via <a href="https://wa.me/905323541129?text=' + encodeURIComponent('Hi ExportTurk, I need: ' + (chatState.product||'products') + '. Specs: ' + (chatState.specs||'TBD') + '. Qty: ' + (chatState.quantity||'TBD') + '. Ship to: ' + (chatState.country||'TBD')) + '" target="_blank" style="color:#25D366;font-weight:bold;">WhatsApp</a> or email <strong><span class="e-mask" data-u="aW5mbw==" data-d="ZXhwb3J0dHVyay5jb20=">email</span></strong>.';
     }
 
     // Auto-open chat if not opened yet when chat window is displayed via button
@@ -925,5 +925,9 @@
     <!-- ExportTurk AI Assistant v2 (overrides inline chat) -->
     <script src="chatbot-v2.js" defer></script>
 
+<!-- email-mask decoder -->
+<script>
+(function(){var a=document.querySelectorAll('.e-mask');for(var i=0;i<a.length;i++){var el=a[i];var u=atob(el.getAttribute('data-u')||'');var d=atob(el.getAttribute('data-d')||'');if(!u||!d)continue;var e=u+'@'+d;var q=el.getAttribute('data-q')||'';if(el.tagName==='A'){el.href='mailto:'+e+q;var t=(el.textContent||'').trim();if(t==='email'||t==='Contact'||t==='contact'||t===''||t.indexOf(' at ')>-1)el.textContent=e;}else{el.textContent=e;}}})();
+</script>
 </body>
 </html>
